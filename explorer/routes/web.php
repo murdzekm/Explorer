@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/', [ExplorerController::class, 'index'])->name('explorer.index');
+
 Route::post('/store', [ExplorerController::class, 'store'])->name('explorer.store');
 Route::put('/update', [ExplorerController::class, 'updateName'])->name('explorer.update');
 Route::put('/move', [ExplorerController::class, 'move'])->name('explorer.move');
