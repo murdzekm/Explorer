@@ -21,7 +21,20 @@ class CreateExplorersTable extends Migration
             $table->timestamps();
         });
         DB::table('explorers')->insert(['name' => 'World', 'parent_id' => 0]);
+        DB::table('explorers')->insert(['name' => 'Europa', 'parent_id' => 1]);
+        DB::table('explorers')->insert(['name' => 'Afryka', 'parent_id' => 1]);
+        DB::table('explorers')->insert(['name' => 'Polska', 'parent_id' => 2]);
+        DB::table('explorers')->insert(['name' => 'Niemcy', 'parent_id' => 2]);
+        DB::table('explorers')->insert(['name' => 'Warszawa', 'parent_id' => 4]);
+        DB::table('explorers')->insert(['name' => 'Berlin', 'parent_id' => 5]);
+        DB::table('explorers')->insert(['name' => 'Monachium', 'parent_id' => 5]);
+        DB::table('explorers')->insert(['name' => 'Kraków', 'parent_id' => 4]);
+        DB::table('explorers')->insert(['name' => 'Gdańsk', 'parent_id' => 4]);
+
+
+
     }
+
 
     /**
      * Reverse the migrations.
