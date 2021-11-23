@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateExplorersTable extends Migration
@@ -14,11 +15,12 @@ class CreateExplorersTable extends Migration
     public function up()
     {
         Schema::create('explorers', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name');
             $table->integer('parent_id');
             $table->timestamps();
         });
+        DB::table('explorers')->insert(['name' => 'World', 'parent_id' => 0]);
     }
 
     /**
@@ -26,8 +28,8 @@ class CreateExplorersTable extends Migration
      *
      * @return void
      */
-//    public function down()
-//    {
-//        Schema::dropIfExists('explorers');
-//    }
+    public function down()
+    {
+        Schema::dropIfExists('explorers');
+    }
 }
