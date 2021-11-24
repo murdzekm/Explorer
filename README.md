@@ -2,6 +2,7 @@
 
 # Wykorzystane technologie
 - PHP 8
+- Laravel
 - PostgreSQL 14
 - HTML 5
 - Bootstrap 5
